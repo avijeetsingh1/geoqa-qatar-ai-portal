@@ -2,6 +2,137 @@
 (function () {
   const h = React.createElement;
 
+  // Multilingual content
+  const translations = {
+    ar: {
+      title: 'جيو.قطر — بوابة قطر للذكاء الاصطناعي',
+      heroTitle: 'أنا الخريطة الحية لقطر — بوابتك الهادئة إلى ذكاء على مستوى الفضاء',
+      heroSubtitle: 'بوابتك الهادئة إلى ذكاء على مستوى الفضاء',
+      heroParagraph1: 'أراقب تنفس الساحل، وتحرك الصحراء، وتوهج المدينة. أحمل مشاهد الأقمار الصناعية الحديثة والحقائق الأرضية في ذاكرة واحدة. اسألني عن الأرض والمياه والمباني والطرق والسفن — أجيب بالأدلة.',
+      heroParagraph2: 'لا أصرخ. لا أزين. أحل المشاكل. للمخططين والمؤسسين، للمستجيبين والباحثين — أحول الإحداثيات إلى وضوح.',
+      heroParagraph3: 'بناه Vortx.ai، أخدم وعداً واحداً: ذكاء اصطناعي موثوق لقطر — مؤسس في المدار، مُسلم في ثوانٍ.',
+      enterPortal: 'ادخل البوابة',
+      talkToVortx: 'تحدث مع Vortx.ai',
+      byVortx: 'بواسطة Vortx.ai',
+      themeDark: 'ليل',
+      themeLight: 'نهار',
+      themeToggleAria: 'تبديل السمة',
+      langToggleAria: 'تبديل اللغة',
+      nav: { enter: 'دخول', capabilities: 'القدرات', contact: 'اتصال' },
+      capabilities: {
+        syntheticThreat: { title: 'درع التهديد الاصطناعي', desc: 'يكتشف المحتوى المزيف والهجمات الاصطناعية قبل أن تخترق دفاعاتك. ذكاء حقيقي، أصالة موثقة.' },
+        explainableReasoning: { title: 'استدلال قابل للتفسير', desc: 'لا ألغاز صندوق أسود. كل استنتاج يعود إلى الأدلة، ويظهر كيف ولماذا تنبثق القرارات من البيانات.' },
+        securityFromAbove: { title: 'أمان من الأعلى', desc: 'تقييم الثغرات بقوة الأقمار الصناعية يكشف ما تفوته عمليات التدقيق الأرضية. انظر إلى بصمتك التشغيلية بالكامل.' },
+        intelligenceInMinutes: { title: 'ذكاء في دقائق', desc: 'تحليل جيومكاني معقد مقطر إلى رؤى جاهزة للتنفيذ. أدلة، استنتاجات، توصيات — مُسلمة بسرعة القرار.' },
+        qatarSovereign: { title: 'معالجة سيادية قطرية', desc: 'بياناتك تبقى ضمن حدود قطر. لا تعرض خارجي، مسارات تدقيق كاملة، امتثال على مستوى المؤسسات.' },
+        transparentByDesign: { title: 'شفاف بالتصميم', desc: 'انظر إلى الاستدلال، تحدى المنطق، تحقق من المصادر. ذكاء يمكنك الوثوق به لأنك تفهمه.' }
+      },
+      footer: {
+        copyright: '© 2025 جيو.قطر — بوابة قطر للذكاء الاصطناعي • بناه Vortx.ai',
+        contact: 'اتصال:'
+      }
+    },
+    en: {
+      title: 'geo.qa — Qatar\'s AI Portal',
+      heroTitle: 'I am Qatar\'s living map — your quiet portal into space‑level intelligence',
+      heroSubtitle: 'Your quiet portal into space‑level intelligence',
+      heroParagraph1: 'I watch the shoreline breathe, the desert shift, the city glow. I hold fresh satellite scenes and ground truth in a single memory. Ask me about land, water, buildings, roads, ships — I answer with evidence.',
+      heroParagraph2: 'I don\'t shout. I don\'t decorate. I resolve. For planners and founders, for responders and researchers — I turn coordinates into clarity.',
+      heroParagraph3: 'Built by Vortx.ai, I serve one promise: trustworthy AI for Qatar — grounded in orbit, delivered in seconds.',
+      enterPortal: 'Enter the Portal',
+      talkToVortx: 'Talk to Vortx.ai',
+      byVortx: 'by Vortx.ai',
+      themeDark: 'Night',
+      themeLight: 'Day',
+      themeToggleAria: 'Toggle theme',
+      langToggleAria: 'Toggle language',
+      nav: { enter: 'Enter', capabilities: 'Capabilities', contact: 'Contact' },
+      capabilities: {
+        syntheticThreat: { title: 'Synthetic Threat Shield', desc: 'Detects deepfakes, AI-generated content, and synthetic attacks before they breach your defenses. Real intelligence, verified authenticity.' },
+        explainableReasoning: { title: 'Explainable Reasoning', desc: 'No black box mysteries. Every conclusion traces back to evidence, showing how and why decisions emerge from data.' },
+        securityFromAbove: { title: 'Security from Above', desc: 'Satellite-powered vulnerability assessment reveals what ground-level audits miss. See your entire operational footprint.' },
+        intelligenceInMinutes: { title: 'Intelligence in Minutes', desc: 'Complex geospatial analysis distilled into executive-ready insights. Evidence, conclusions, recommendations — delivered at decision speed.' },
+        qatarSovereign: { title: 'Qatar-Sovereign Processing', desc: 'Your data remains within Qatar borders. Zero external exposure, complete audit trails, enterprise-grade compliance.' },
+        transparentByDesign: { title: 'Transparent by Design', desc: 'See the reasoning, challenge the logic, verify the sources. Intelligence you can trust because you understand it.' }
+      },
+      footer: {
+        copyright: '© 2025 geo.qa — Qatar\'s AI Portal • Built by Vortx.ai',
+        contact: 'Contact:'
+      }
+    }
+  };
+
+  // State management
+  function useGlobalState() {
+    const [currentLang, setCurrentLang] = React.useState(() => {
+      return localStorage.getItem('geo-qa-lang') || 'ar';
+    });
+    const [isDark, setIsDark] = React.useState(() => {
+      return localStorage.getItem('geo-qa-theme') !== 'light';
+    });
+
+    React.useEffect(() => {
+      localStorage.setItem('geo-qa-lang', currentLang);
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+      document.title = translations[currentLang].title;
+    }, [currentLang]);
+
+    React.useEffect(() => {
+      localStorage.setItem('geo-qa-theme', isDark ? 'dark' : 'light');
+      // Toggle rak-light class for light mode; default is dark
+      document.documentElement.classList.toggle('rak-light', !isDark);
+    }, [isDark]);
+
+    return { currentLang, setCurrentLang, isDark, setIsDark, t: translations[currentLang] };
+  }
+
+  // Language selector component
+  function LanguageSelector({ currentLang, setCurrentLang, t }) {
+    const languages = [
+      { code: 'ar', name: 'العربية' },
+      { code: 'en', name: 'English' }
+    ];
+
+    return h('div', { className: 'relative group' },
+      h('button', { 
+        className: 'flex items-center gap-2 px-3 py-2 rounded-lg border border-white/10 bg-white/5 backdrop-blur text-sm transition-all duration-200 hover:bg-white/10',
+        onClick: () => setCurrentLang(currentLang === 'ar' ? 'en' : 'ar'),
+        'aria-label': t.langToggleAria,
+        title: t.langToggleAria
+      },
+        // Upgraded globe icon
+        h('svg', {
+          className: 'h-4 w-4 text-zinc-300',
+          viewBox: '0 0 24 24',
+          fill: 'none',
+          stroke: 'currentColor',
+          strokeWidth: '1.5',
+          'aria-hidden': 'true'
+        },
+          h('circle', { cx: '12', cy: '12', r: '9' }),
+          h('ellipse', { cx: '12', cy: '12', rx: '7', ry: '4' }),
+          h('ellipse', { cx: '12', cy: '12', rx: '3', ry: '9' })
+        ),
+        h('span', null, languages.find(l => l.code === currentLang)?.name),
+        h('span', { className: 'text-xs text-zinc-400' }, '⇄')
+      )
+    );
+  }
+
+  // Theme toggle component  
+  function ThemeToggle({ isDark, setIsDark, t }) {
+    return h('button', {
+      className: 'flex items-center gap-2 px-3 py-2 rounded-lg border border-white/10 bg-white/5 backdrop-blur text-sm transition-all duration-200 hover:bg-white/10',
+      onClick: () => setIsDark(!isDark),
+      'aria-label': t.themeToggleAria,
+      title: t.themeToggleAria
+    },
+      h('span', { className: 'text-sm transition-transform duration-200' }, isDark ? '🌙' : '☀️'),
+      h('span', { className: 'text-xs text-zinc-400' }, isDark ? t.themeDark : t.themeLight)
+    );
+  }
+
   function CapabilityCard(props) {
     return h(
       'div',
@@ -48,6 +179,8 @@
   }
 
   function GeoQALanding() {
+    const { currentLang, setCurrentLang, isDark, setIsDark, t } = useGlobalState();
+
     return h(
       'main',
       { className: 'min-h-screen bg-black text-zinc-200 antialiased' },
@@ -154,12 +287,16 @@
         h('div', { className: 'flex items-center gap-3' },
           h('div', { className: 'h-2.5 w-2.5 rounded-full bg-sky-400 shadow-[0_0_24px_6px_rgba(56,189,248,0.6)] animate-pulse' }),
           h('span', { className: 'text-lg font-semibold tracking-tight text-white' }, 'geo.qa'),
-          h('span', { className: 'text-xs text-zinc-400' }, 'by Vortx.ai')
+          h('span', { className: 'text-xs text-zinc-400' }, t.byVortx)
         ),
         h('nav', { className: 'hidden md:flex items-center gap-6 text-sm text-zinc-400' },
-          h('a', { href: '#enter', className: 'hover:text-zinc-200 transition-colors duration-200 hover:scale-105 transition-transform' }, 'Enter'),
-          h('a', { href: '#capabilities', className: 'hover:text-zinc-200 transition-colors duration-200 hover:scale-105 transition-transform' }, 'Capabilities'),
-          h('a', { href: '#contact', className: 'hover:text-zinc-200 transition-colors duration-200 hover:scale-105 transition-transform' }, 'Contact')
+          h('a', { href: '#enter', className: 'hover:text-zinc-200 transition-colors duration-200 hover:scale-105 transition-transform' }, t.nav.enter),
+          h('a', { href: '#capabilities', className: 'hover:text-zinc-200 transition-colors duration-200 hover:scale-105 transition-transform' }, t.nav.capabilities),
+          h('a', { href: '#contact', className: 'hover:text-zinc-200 transition-colors duration-200 hover:scale-105 transition-transform' }, t.nav.contact)
+        ),
+        h('div', { className: 'flex items-center gap-2' },
+          h(LanguageSelector, { currentLang, setCurrentLang, t }),
+          h(ThemeToggle, { isDark, setIsDark, t })
         ),
         // Mobile menu indicator
         h('div', { className: 'md:hidden flex items-center gap-1 text-xs text-zinc-500' },
@@ -171,45 +308,49 @@
 
       // hero
       h('section', { className: 'mx-auto w-full max-w-4xl px-6 pt-10 md:pt-16' },
-        h('h1', { className: 'text-4xl leading-tight tracking-tight text-white md:text-6xl md:leading-[1.07] animate-fade-in' },
-          'I am Qatar\'s ', h('span', { className: 'text-zinc-400 hover:text-[#8A1538] transition-colors duration-300' }, 'living map'), ' — your quiet portal into space‑level intelligence.'
+        h('h1', { className: 'text-4xl leading-tight tracking-tight text-white md:text-6xl md:leading-[1.07] animate-fade-in', dir: currentLang === 'ar' ? 'rtl' : 'ltr' },
+          t.heroTitle
         ),
-        h('p', { className: 'mt-3 text-base text-zinc-400 md:text-lg', dir: 'rtl', lang: 'ar' },
-          'بوابتك الهادئة إلى ذكاء على مستوى الفضاء'
+        h('p', { className: 'mt-3 text-base text-zinc-400 md:text-lg', dir: currentLang === 'ar' ? 'rtl' : 'ltr', lang: currentLang },
+          t.heroSubtitle
         ),
-        h('div', { className: 'mt-6 max-w-3xl text-lg leading-relaxed text-zinc-300 md:text-xl' },
-          h('p', null, 'I watch the shoreline breathe, the desert shift, the city glow. I hold fresh satellite scenes and ground truth in a single memory. Ask me about land, water, buildings, roads, ships — I answer with evidence.'),
-          h('p', { className: 'mt-4' }, 'I don’t shout. I don’t decorate. I resolve. For planners and founders, for responders and researchers — I turn coordinates into clarity.'),
-          h('p', { className: 'mt-4' }, 'Built by ', h('span', { className: 'text-white' }, 'Vortx.ai'), ', I serve one promise: ', h('span', { className: 'text-white' }, 'trustworthy AI for Qatar'), ' — grounded in orbit, delivered in seconds.')
+        h('div', { className: 'mt-6 max-w-3xl text-lg leading-relaxed text-zinc-300 md:text-xl', dir: currentLang === 'ar' ? 'rtl' : 'ltr', lang: currentLang },
+          h('p', null, t.heroParagraph1),
+          h('p', { className: 'mt-4' }, t.heroParagraph2),
+          h('p', { className: 'mt-4' },
+            currentLang === 'ar'
+              ? t.heroParagraph3
+              : ['Built by ', h('span', { className: 'text-white', key: 'v1' }, 'Vortx.ai'), ', I serve one promise: ', h('span', { className: 'text-white', key: 'v2' }, 'trustworthy AI for Qatar'), ' — grounded in orbit, delivered in seconds.']
+          )
         ),
         h('div', { id: 'enter', className: 'mt-8 flex flex-col gap-3 sm:flex-row' },
-          h('a', { href: '#capabilities', className: 'group inline-flex items-center justify-center rounded-xl border border-zinc-700 bg-white/5 px-5 py-3 text-sm font-medium text-zinc-100 backdrop-blur transition-all duration-300 hover:bg-white/10 hover:border-sky-400/50 hover:shadow-lg hover:shadow-sky-500/20 hover:scale-[1.02]' }, 
-            'Enter the Portal ',
-            h('span', { className: 'ml-2 transition-transform duration-200 group-hover:translate-x-1' }, '→')
+          h('a', { href: '#capabilities', className: 'inline-flex items-center justify-center rounded-xl border border-zinc-700 px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white transition-all duration-300 hover:border-zinc-500 hover:scale-[1.02]' }, 
+            t.enterPortal, ' ',
+            h('span', { className: currentLang === 'ar' ? 'mr-2' : 'ml-2' }, currentLang === 'ar' ? '←' : '→')
           ),
-          h('a', { href: '#contact', className: 'inline-flex items-center justify-center rounded-xl border border-zinc-700 px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white transition-all duration-300 hover:border-zinc-500 hover:scale-[1.02]' }, 'Talk to Vortx.ai')
+          h('a', { href: '#contact', className: 'inline-flex items-center justify-center rounded-xl border border-zinc-700 px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white transition-all duration-300 hover:border-zinc-500 hover:scale-[1.02]' }, t.talkToVortx)
         )
       ),
 
       // capabilities
       h('section', { id: 'capabilities', className: 'mx-auto w-full max-w-5xl px-6 py-16 md:py-20' },
-        h('div', { className: 'grid gap-6 md:grid-cols-3' },
-          h(CapabilityCard, { title: 'Synthetic Threat Shield' }, 'Detects deepfakes, AI-generated content, and synthetic attacks before they breach your defenses. Real intelligence, verified authenticity.'),
-          h(CapabilityCard, { title: 'Explainable Reasoning' }, 'No black box mysteries. Every conclusion traces back to evidence, showing how and why decisions emerge from data.'),
-          h(CapabilityCard, { title: 'Security from Above' }, 'Satellite-powered vulnerability assessment reveals what ground-level audits miss. See your entire operational footprint.'),
-          h(CapabilityCard, { title: 'Intelligence in Minutes' }, 'Complex geospatial analysis distilled into executive-ready insights. Evidence, conclusions, recommendations — delivered at decision speed.'),
-          h(CapabilityCard, { title: 'Qatar-Sovereign Processing' }, 'Your data remains within Qatar borders. Zero external exposure, complete audit trails, enterprise-grade compliance.'),
-          h(CapabilityCard, { title: 'Transparent by Design' }, 'See the reasoning, challenge the logic, verify the sources. Intelligence you can trust because you understand it.')
+        h('div', { className: 'grid gap-6 md:grid-cols-3', dir: currentLang === 'ar' ? 'rtl' : 'ltr', lang: currentLang },
+          h(CapabilityCard, { title: t.capabilities.syntheticThreat.title }, t.capabilities.syntheticThreat.desc),
+          h(CapabilityCard, { title: t.capabilities.explainableReasoning.title }, t.capabilities.explainableReasoning.desc),
+          h(CapabilityCard, { title: t.capabilities.securityFromAbove.title }, t.capabilities.securityFromAbove.desc),
+          h(CapabilityCard, { title: t.capabilities.intelligenceInMinutes.title }, t.capabilities.intelligenceInMinutes.desc),
+          h(CapabilityCard, { title: t.capabilities.qatarSovereign.title }, t.capabilities.qatarSovereign.desc),
+          h(CapabilityCard, { title: t.capabilities.transparentByDesign.title }, t.capabilities.transparentByDesign.desc)
         )
       ),
 
       // footer with skyline
       h('footer', { id: 'contact', className: 'border-t border-white/10' },
-        h('div', { className: 'mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-4 px-6 py-8 md:flex-row md:items-center' },
-          h('div', { className: 'text-sm text-zinc-400' }, `© ${new Date().getFullYear()} geo.qa — Qatar’s AI Portal • Built by Vortx.ai`),
-          h('div', { className: 'text-sm text-zinc-400' }, 'Contact: ', h('a', { className: 'hover:text-zinc-200 transition-colors duration-200 hover:underline decoration-sky-400', href: 'mailto:hello@vortx.ai' }, 'hello@vortx.ai'))
+        h('div', { className: 'mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-4 px-6 py-8 md:flex-row md:items-center', dir: currentLang === 'ar' ? 'rtl' : 'ltr', lang: currentLang },
+          h('div', { className: 'text-sm text-zinc-400' }, `${t.footer?.copyright || ('© ' + new Date().getFullYear() + ' geo.qa — Qatar’s AI Portal • Built by Vortx.ai')}`),
+          h('div', { className: 'text-sm text-zinc-400' }, (t.footer?.contact || 'Contact:'), ' ', h('a', { className: 'hover:text-zinc-200 transition-colors duration-200 hover:underline decoration-sky-400', href: 'mailto:hello@vortx.ai' }, 'hello@vortx.ai'))
         ),
-        h('div', { className: 'pointer-events-none relative' },
+        h('div', { className: 'pointer-events-none relative footer-accent' },
           h('svg', { 'aria-hidden': 'true', className: 'absolute inset-x-0 -bottom-0 h-24 w-full opacity-25 md:h-32', viewBox: '0 0 1200 200', preserveAspectRatio: 'none' },
             h('defs', null,
               h('linearGradient', { id: 'qatar-maroon', x1: '0', y1: '0', x2: '0', y2: '1' },
@@ -254,4 +395,3 @@
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(h(GeoQALanding));
 })();
-

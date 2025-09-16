@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>geo.qa — Qatar's AI Portal</title>
-    <meta name="description" content="geo.qa — Qatar's AI Portal by Vortx.ai" />
+    <title>جيو.قطر — بوابة قطر للذكاء الاصطناعي</title>
+    <meta name="description" content="جيو.قطر — بوابة قطر للذكاء الاصطناعي من Vortx.ai" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @keyframes fadeIn {
@@ -30,7 +30,7 @@
       }
       
       /* Qatar maroon hover for living map */
-      .hover\\:text-\\[\\#8A1538\\]:hover {
+      .hover\:text-\[\#8A1538\]:hover {
         color: #8A1538 !important;
       }
       
@@ -104,7 +104,6 @@
         padding: 0;
         background: #000000 !important;
         background-image: none !important;
-        background-pattern: none !important;
         overscroll-behavior: none;
         background-color: #111111 !important;
       }
@@ -141,6 +140,36 @@
         background: #111111;
         z-index: -1000;
       }
+
+      /* Light theme overrides when `rak-light` is on <html> */
+      html.rak-light, html.rak-light body {
+        background: #ffffff !important;
+        background-image: none !important;
+        background-color: #f8fafc !important;
+        color: #0f172a !important;
+        color-scheme: light;
+      }
+      html.rak-light body::before,
+      html.rak-light body::after {
+        background: #f8fafc !important;
+      }
+      html.rak-light .bg-black {
+        background-color: #ffffff !important;
+      }
+      html.rak-light .text-white { color: #0f172a !important; }
+      html.rak-light .text-zinc-200 { color: #0f172a !important; }
+      html.rak-light .text-zinc-300 { color: #111827 !important; }
+      html.rak-light .text-zinc-400 { color: #334155 !important; }
+      html.rak-light [class*="border-white/10"] { border-color: rgba(0,0,0,0.1) !important; }
+      html.rak-light [class*="bg-white/5"] { background-color: rgba(0,0,0,0.03) !important; }
+      html.rak-light [class*="hover:bg-white/10"]:hover { background-color: rgba(0,0,0,0.06) !important; }
+      html.rak-light [class*="border-zinc-700"] { border-color: rgba(0,0,0,0.15) !important; }
+      html.rak-light [class*="hover:border-zinc-500"]:hover { border-color: rgba(0,0,0,0.3) !important; }
+      html.rak-light [class*="hover:text-white"]:hover { color: #0f172a !important; }
+
+      /* Light theme footer matches body */
+      html.rak-light footer { background: #f8fafc !important; }
+      html.rak-light .footer-accent { display: none !important; }
     </style>
   </head>
   <body class="antialiased bg-black">
