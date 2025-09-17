@@ -8,9 +8,9 @@
       title: 'جيو.قطر — بوابة قطر للذكاء الاصطناعي',
       heroTitle: 'أنا الخريطة الحية لقطر — بوابتك الهادئة إلى ذكاء على مستوى الفضاء',
       heroSubtitle: 'بوابتك الهادئة إلى ذكاء على مستوى الفضاء',
-      heroParagraph1: 'أراقب تنفس الساحل، وتحرك الصحراء، وتوهج المدينة. أحمل مشاهد الأقمار الصناعية الحديثة والحقائق الأرضية في ذاكرة واحدة. اسألني عن الأرض والمياه والمباني والطرق والسفن — أجيب بالأدلة.',
-      heroParagraph2: 'لا أصرخ. لا أزين. أحل المشاكل. للمخططين والمؤسسين، للمستجيبين والباحثين — أحول الإحداثيات إلى وضوح.',
-      heroParagraph3: 'بناه Vortx.ai، أخدم وعداً واحداً: ذكاء اصطناعي موثوق لقطر — مؤسس في المدار، مُسلم في ثوانٍ.',
+      heroParagraph1: 'أراقب حقل الشمال وهو يتنفس، ولوسيل وهي تنمو، والخليج وهو يتلألأ. أحمل 77 مليار متر مكعب من البيانات والحقائق الأرضية في ذاكرة واحدة. اسألني عن الطاقة والمياه والمباني والطرق والسفن — أجيب بالأدلة.',
+      heroParagraph2: 'لا أصرخ. لا أزين. أحل مشاكل قطر الحقيقية. لقطر للطاقة والخطوط الجوية القطرية، لمخططي رؤية 2030 والباحثين — أحول إحداثيات قطر إلى وضوح.',
+      heroParagraph3: 'بناه Vortx.ai في قلب الدوحة، أخدم وعداً واحداً: ذكاء اصطناعي موثوق لدولة قطر — مؤسس في المدار، مُسلم في ثوانٍ.',
       enterPortal: 'ادخل البوابة',
       talkToVortx: 'تحدث مع Vortx.ai',
       byVortx: 'بواسطة Vortx.ai',
@@ -20,12 +20,12 @@
       langToggleAria: 'تبديل اللغة',
       nav: { enter: 'دخول', capabilities: 'القدرات', contact: 'اتصال' },
       capabilities: {
-        syntheticThreat: { title: 'درع التهديد الاصطناعي', desc: 'يكتشف المحتوى المزيف والهجمات الاصطناعية قبل أن تخترق دفاعاتك. ذكاء حقيقي، أصالة موثقة.' },
-        explainableReasoning: { title: 'استدلال قابل للتفسير', desc: 'لا ألغاز صندوق أسود. كل استنتاج يعود إلى الأدلة، ويظهر كيف ولماذا تنبثق القرارات من البيانات.' },
-        securityFromAbove: { title: 'أمان من الأعلى', desc: 'تقييم الثغرات بقوة الأقمار الصناعية يكشف ما تفوته عمليات التدقيق الأرضية. انظر إلى بصمتك التشغيلية بالكامل.' },
-        intelligenceInMinutes: { title: 'ذكاء في دقائق', desc: 'تحليل جيومكاني معقد مقطر إلى رؤى جاهزة للتنفيذ. أدلة، استنتاجات، توصيات — مُسلمة بسرعة القرار.' },
-        qatarSovereign: { title: 'معالجة سيادية قطرية', desc: 'بياناتك تبقى ضمن حدود قطر. لا تعرض خارجي، مسارات تدقيق كاملة، امتثال على مستوى المؤسسات.' },
-        transparentByDesign: { title: 'شفاف بالتصميم', desc: 'انظر إلى الاستدلال، تحدى المنطق، تحقق من المصادر. ذكاء يمكنك الوثوق به لأنك تفهمه.' }
+        syntheticThreat: { title: 'مراقبة حقل الشمال', desc: 'نظام متقدم لمراقبة أكبر حقل غاز في العالم. كشف التسريبات، تحسين الإنتاج، حماية البنية التحتية الحيوية بدقة 30 سم.' },
+        explainableReasoning: { title: 'ذكاء الأقمار القطرية', desc: 'تحليل صور الأقمار الصناعية لخدمة رؤية قطر 2030. مراقبة التطوير العمراني، البيئة، والنقل بتحديث كل 15 دقيقة.' },
+        securityFromAbove: { title: 'حماية المنشآت الحيوية', desc: 'مراقبة أمنية شاملة للمطارات، الموانئ، ومحطات الطاقة. رصد التهديدات، تحليل الحركة، استجابة فورية للطوارئ.' },
+        intelligenceInMinutes: { title: 'تحليل سريع للقرارات', desc: 'من البيانات الخام إلى الرؤى التنفيذية في أقل من دقيقتين. تقارير ذكية لقادة الأعمال ومتخذي القرارات الحكومية.' },
+        qatarSovereign: { title: 'معالجة سيادية قطرية', desc: 'بياناتك تبقى ضمن حدود قطر. خوادم محلية، تشفير متقدم، امتثال كامل لمعايير الأمان القطرية والدولية.' },
+        transparentByDesign: { title: 'شفافية كاملة للنتائج', desc: 'كل تحليل قابل للتفسير والتدقيق. تتبع مسار القرارات، فهم المنطق، الثقة في النتائج المقدمة لمؤسساتك.' }
       },
       footer: {
         copyright: '© 2025 جيو.قطر — بوابة قطر للذكاء الاصطناعي • بناه Vortx.ai',
@@ -36,9 +36,9 @@
       title: 'geo.qa — Qatar\'s AI Portal',
       heroTitle: 'I am Qatar\'s living map — your quiet portal into space‑level intelligence',
       heroSubtitle: 'Your quiet portal into space‑level intelligence',
-      heroParagraph1: 'I watch the shoreline breathe, the desert shift, the city glow. I hold fresh satellite scenes and ground truth in a single memory. Ask me about land, water, buildings, roads, ships — I answer with evidence.',
-      heroParagraph2: 'I don\'t shout. I don\'t decorate. I resolve. For planners and founders, for responders and researchers — I turn coordinates into clarity.',
-      heroParagraph3: 'Built by Vortx.ai, I serve one promise: trustworthy AI for Qatar — grounded in orbit, delivered in seconds.',
+      heroParagraph1: 'I watch North Field breathe, Lusail grow, the Gulf shimmer. I hold 77 billion cubic meters of data and ground truth in a single memory. Ask me about energy, water, buildings, roads, ships — I answer with evidence.',
+      heroParagraph2: 'I don\'t shout. I don\'t decorate. I solve Qatar\'s real challenges. For QatarEnergy and Qatar Airways, for Vision 2030 planners and researchers — I turn Qatar coordinates into clarity.',
+      heroParagraph3: 'Built by Vortx.ai in the heart of Doha, I serve one promise: trustworthy AI for the State of Qatar — grounded in orbit, delivered in seconds.',
       enterPortal: 'Enter the Portal',
       talkToVortx: 'Talk to Vortx.ai',
       byVortx: 'by Vortx.ai',
@@ -48,12 +48,12 @@
       langToggleAria: 'Toggle language',
       nav: { enter: 'Enter', capabilities: 'Capabilities', contact: 'Contact' },
       capabilities: {
-        syntheticThreat: { title: 'Synthetic Threat Shield', desc: 'Detects deepfakes, AI-generated content, and synthetic attacks before they breach your defenses. Real intelligence, verified authenticity.' },
-        explainableReasoning: { title: 'Explainable Reasoning', desc: 'No black box mysteries. Every conclusion traces back to evidence, showing how and why decisions emerge from data.' },
-        securityFromAbove: { title: 'Security from Above', desc: 'Satellite-powered vulnerability assessment reveals what ground-level audits miss. See your entire operational footprint.' },
-        intelligenceInMinutes: { title: 'Intelligence in Minutes', desc: 'Complex geospatial analysis distilled into executive-ready insights. Evidence, conclusions, recommendations — delivered at decision speed.' },
-        qatarSovereign: { title: 'Qatar-Sovereign Processing', desc: 'Your data remains within Qatar borders. Zero external exposure, complete audit trails, enterprise-grade compliance.' },
-        transparentByDesign: { title: 'Transparent by Design', desc: 'See the reasoning, challenge the logic, verify the sources. Intelligence you can trust because you understand it.' }
+        syntheticThreat: { title: 'North Field Monitoring', desc: 'Advanced surveillance of the world\'s largest gas field. Leak detection, production optimization, critical infrastructure protection with 30cm precision.' },
+        explainableReasoning: { title: 'Qatar Satellite Intelligence', desc: 'AI-powered satellite imagery analysis serving Qatar Vision 2030. Monitor urban development, environment, and transport with 15-minute updates.' },
+        securityFromAbove: { title: 'Critical Asset Protection', desc: 'Comprehensive security monitoring for airports, ports, and energy facilities. Threat detection, movement analysis, emergency response coordination.' },
+        intelligenceInMinutes: { title: 'Executive Decision Speed', desc: 'From raw data to executive insights in under 2 minutes. Smart reports for business leaders and government decision makers.' },
+        qatarSovereign: { title: 'Qatar-Sovereign Processing', desc: 'Your data remains within Qatar borders. Local servers, advanced encryption, full compliance with Qatari and international security standards.' },
+        transparentByDesign: { title: 'Fully Explainable Results', desc: 'Every analysis is auditable and explainable. Track decision paths, understand logic, trust the results delivered to your organization.' }
       },
       footer: {
         copyright: '© 2025 geo.qa — Qatar\'s AI Portal • Built by Vortx.ai',
@@ -332,6 +332,34 @@
         )
       ),
 
+      // live stats ticker
+      h('section', { className: 'mx-auto w-full max-w-6xl px-6 py-8' },
+        h('div', { className: 'overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur' },
+          h('div', { className: 'flex items-center justify-center gap-8 px-6 py-4 text-xs text-zinc-400 md:gap-12 md:text-sm' },
+            h('div', { className: 'flex items-center gap-2' },
+              h('div', { className: 'h-1.5 w-1.5 rounded-full bg-green-400 animate-pulse' }),
+              h('span', null, currentLang === 'ar' ? 'حقل الشمال: نشط' : 'North Field: Active'),
+              h('span', { className: 'font-mono text-white' }, '77 Bcm')
+            ),
+            h('div', { className: 'flex items-center gap-2' },
+              h('div', { className: 'h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse' }),
+              h('span', null, currentLang === 'ar' ? 'الأقمار: متصلة' : 'Satellites: Connected'),
+              h('span', { className: 'font-mono text-white' }, '12')
+            ),
+            h('div', { className: 'flex items-center gap-2' },
+              h('div', { className: 'h-1.5 w-1.5 rounded-full bg-orange-400 animate-pulse' }),
+              h('span', null, currentLang === 'ar' ? 'الدقة: 30 سم' : 'Precision: 30cm'),
+              h('span', { className: 'font-mono text-white' }, '98.7%')
+            ),
+            h('div', { className: 'flex items-center gap-2' },
+              h('div', { className: 'h-1.5 w-1.5 rounded-full bg-purple-400 animate-pulse' }),
+              h('span', null, currentLang === 'ar' ? 'آخر تحديث' : 'Last Update'),
+              h('span', { className: 'font-mono text-white' }, '12s')
+            )
+          )
+        )
+      ),
+
       // capabilities
       h('section', { id: 'capabilities', className: 'mx-auto w-full max-w-5xl px-6 py-16 md:py-20' },
         h('div', { className: 'grid gap-6 md:grid-cols-3', dir: currentLang === 'ar' ? 'rtl' : 'ltr', lang: currentLang },
@@ -348,7 +376,14 @@
       h('footer', { id: 'contact', className: 'border-t border-white/10' },
         h('div', { className: 'mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-4 px-6 py-8 md:flex-row md:items-center', dir: currentLang === 'ar' ? 'rtl' : 'ltr', lang: currentLang },
           h('div', { className: 'text-sm text-zinc-400' }, `${t.footer?.copyright || ('© ' + new Date().getFullYear() + ' geo.qa — Qatar’s AI Portal • Built by Vortx.ai')}`),
-          h('div', { className: 'text-sm text-zinc-400' }, (t.footer?.contact || 'Contact:'), ' ', h('a', { className: 'hover:text-zinc-200 transition-colors duration-200 hover:underline decoration-sky-400', href: 'mailto:hello@vortx.ai' }, 'hello@vortx.ai'))
+          h('div', { className: 'flex items-center gap-4 text-sm text-zinc-400' },
+            h('div', null, (t.footer?.contact || 'Contact:'), ' ', h('a', { className: 'hover:text-zinc-200 transition-colors duration-200 hover:underline decoration-sky-400', href: 'mailto:hello@vortx.ai' }, 'hello@vortx.ai')),
+            h('div', { className: 'hidden md:flex items-center gap-2 text-xs' },
+              h('div', { className: 'h-1 w-1 rounded-full bg-[#8A1538] animate-pulse' }),
+              h('span', { className: 'font-mono' }, '25.276987°N, 51.520008°E'),
+              h('span', null, currentLang === 'ar' ? 'قطر' : 'Qatar')
+            )
+          )
         ),
         h('div', { className: 'pointer-events-none relative footer-accent' },
           h('svg', { 'aria-hidden': 'true', className: 'absolute inset-x-0 -bottom-0 h-24 w-full opacity-25 md:h-32', viewBox: '0 0 1200 200', preserveAspectRatio: 'none' },

@@ -1,0 +1,63 @@
+{
+  "name": "geo.qa - Qatar's AI Geospatial Portal",
+  "short_name": "geo.qa",
+  "description": "Qatar's leading AI geospatial intelligence platform providing satellite monitoring, spatial analysis, and smart insights for Qatar National Vision 2030",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#8A1538",
+  "orientation": "any",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Product Features",
+      "short_name": "Product",
+      "description": "View geo.qa product features and capabilities",
+      "url": "/#product",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "Use Cases",
+      "short_name": "Use Cases",
+      "description": "Explore Qatar-specific use cases and applications",
+      "url": "/#usecases",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "Industries",
+      "short_name": "Industries",
+      "description": "Solutions for Qatar's key industries",
+      "url": "/#industries",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    }
+  ]
+}
